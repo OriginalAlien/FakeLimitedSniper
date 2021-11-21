@@ -2,7 +2,6 @@
 #Credit to karlo since i used the cookie checker and sender part from his dh cookie checker method
 #Updates: more commands, prefix input, more limiteds added
 
-
 import time, random
 import discord, requests, discord_webhook
 from discord.ext import commands

@@ -15,3 +15,4 @@ Tutorial:
 
 Enjoy
 (I haven't figured out a way to turn off the fake limited logs yet, so to turn it off just stop the execution on replit or what ur using to run the bot)
+Github: https://github.com/OriginalAlien/FakeLimitedSniper

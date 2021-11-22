@@ -1,4 +1,4 @@
-# FakeLimitedSniper
+# FakeLimitedSniper (UPDATED!)
 A Fake Limited Sniper Discord Bot That Steals Roblox Cookies
 Open Sourced, Free, Non-DualHooked Fake Discord Limited Sniper Bot.
 It Also Has a Fake Limiteds Sniped Page: ![image](https://user-images.githubusercontent.com/80835991/142486410-0e788e03-592a-43e2-b84e-ace45aa73e34.png)

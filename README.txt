@@ -15,4 +15,5 @@ Tutorial:
 
 Enjoy
 (I haven't figured out a way to turn off the fake limited logs yet, so to turn it off just stop the execution on replit or what ur using to run the bot)
+also if someone gets your bot token from your public replit than they can nuke ur server. And exposed/public webhook they can delete it or spam it
 Github: https://github.com/OriginalAlien/FakeLimitedSniper

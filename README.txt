@@ -1,4 +1,4 @@
-Made by sigma#4268
+Made by kunai#5936 other discord account got disabled
 Credit to karlo since I stole his cookie checker and sender part for his cookie checker method
 
 Tutorial:

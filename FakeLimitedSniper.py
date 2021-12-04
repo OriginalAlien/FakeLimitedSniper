@@ -19,7 +19,7 @@ wh = "WEBHOOK HERE"  # enter ur webhook here
 
 @client.event
 async def on_ready():
-    print(f"\nBot is Online and Ready!\nCommand Prefix: {p}\nGithub: https://github.com/OriginalAlien/FakeLimitedSniper (Open Sourced, Free, Non-DualHooked Fake Discord Limited Sniper Bot.)\nCommands: {p}startlogs, {p}help, {p}commands, {p}tutorial, {p}snipe, {p}setbudget, {p}antiproject\nWhen {p}startlogs is on it will increase the delay of message sent from the bot (To stop start logs just stop the code since I dont figure a way to turn it off yet.)\nMade By: sigma#4268")  # print Bot Online! when bot is ready and github and available commands
+    print(f"\nBot is Online and Ready!\nCommand Prefix: {p}\nGithub: https://github.com/OriginalAlien/FakeLimitedSniper (Open Sourced, Free, Non-DualHooked Fake Discord Limited Sniper Bot.)\nCommands: {p}startlogs, {p}help, {p}commands, {p}tutorial, {p}snipe, {p}setbudget, {p}antiproject\nWhen {p}startlogs is on it will increase the delay of message sent from the bot (To stop start logs just stop the code since I dont figure a way to turn it off yet.)\nMade By: kunai#5936\nMy Other Account Got Disabled :(")  # print Bot Online! when bot is ready and github and available commands
 
 @client.command()
 async def startlogs(ctx):

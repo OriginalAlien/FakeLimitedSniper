@@ -7,5 +7,5 @@ Preview: ![image](https://user-images.githubusercontent.com/80835991/142486301-5
 
 (Educational Purposes Only)
 
-For Help Contact Me On Discord (sigma#4268)
+For Help Contact Me On Discord (kunai#5936) --my other account got disabled
 Updates: more commands, prefix input, more limiteds added

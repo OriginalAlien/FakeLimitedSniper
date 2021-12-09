@@ -8,4 +8,4 @@ Preview: ![image](https://user-images.githubusercontent.com/80835991/142486301-5
 (Educational Purposes Only)
 
 For Help Contact Me On Discord (kunai#5936) --my other account got disabled
-Updates: more commands, prefix input, more limiteds added
+Updates of 12/9/2021: stop command, minor updates, more limiteds added for limited sniped logs

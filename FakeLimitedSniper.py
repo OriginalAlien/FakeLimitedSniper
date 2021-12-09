@@ -1,4 +1,4 @@
-#Made by: sigma#4268 (dm for help) also startlogs is optional
+#Made by: kunai#5936 (dm for help) and the sigma acc got disabled also startlogs is optional
 #Credit to karlo since i used the cookie checker and sender part from his dh cookie checker method
 #Updates: more commands, prefix input, more limiteds added
 

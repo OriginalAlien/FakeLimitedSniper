@@ -7,7 +7,7 @@ import discord, requests, discord_webhook
 from discord.ext import commands
 from discord_webhook import DiscordEmbed, DiscordWebhook
 
-p = input("\n(Leave Blank For Default Prefix/ Press Enter)\nRecommend to make the prefix a symbol like !, @, #, $, %, ^, &, ., etc..\nCommand Prefix: ") #asks you for the command prefix
+p = input("\n(Leave Blank For Default Prefix/ Press Enter)\nRecommend to make the prefix a symbol like !, @, #, $, %, ^, &, ., etc.. (I do not recommend using \"*\" as a prefix.)\nCommand Prefix: ") #asks you for the command prefix
 if p == "":
 	p = '!'
 
@@ -19,21 +19,21 @@ wh = "WEBHOOK HERE"  # enter ur webhook here
 
 @client.event
 async def on_ready():
-    print(f"\nBot is Online and Ready!\nCommand Prefix: {p}\nGithub: https://github.com/OriginalAlien/FakeLimitedSniper (Open Sourced, Free, Non-DualHooked Fake Discord Limited Sniper Bot.)\nCommands: {p}startlogs, {p}help, {p}commands, {p}tutorial, {p}snipe, {p}setbudget, {p}antiproject\nWhen {p}startlogs is on it will increase the delay of message sent from the bot (To stop start logs just stop the code since I dont figure a way to turn it off yet.)\nMade By: kunai#5936\nMy Other Account Got Disabled :(")  # print Bot Online! when bot is ready and github and available commands
+    print(f"\nBot is Online and Ready!\nCommand Prefix: {p}\nGithub: https://github.com/OriginalAlien/FakeLimitedSniper (Open Sourced, Free, Non-DualHooked Fake Discord Limited Sniper Bot.)\nCommands: {p}startlogs, {p}help, {p}commands, {p}tutorial, {p}snipe, {p}setbudget, {p}antiproject, {p}stop\nWhen {p}startlogs is on it will increase the delay of message sent from the bot (To stop start logs just stop the code since I dont figure a way to turn it off yet.)\nMade By: kunai#5936\nMy Other Account Got Disabled :(")  # print Bot Online! when bot is ready and github and available commands
 
-@client.command()
+@client.command() #start logs command
 async def startlogs(ctx):
 	showing_logs = True
 	channel = client.get_channel(CHANNEL ID HERE) #put the channel id you want the logs to show in here
 	#you can add more limiteds below if you want
-	limited_lists = ['Valkyrie Helm', 'Playful Vampire', 'Super Super Happy Face', 'Supa Dupa Fly Cap', 'Supa Fly Cap', 'Gucci Dionysus Bag with Bee', 'Gucci GG Marmont Bag', 'Gucci Wide Brim Felt Hat', 'Noob Attack: Frozen Crossbow Collision', 'Noob Assist Marvelous Mom', 'Noob Attack: Golden Sword Gladiator', 'Chill Cap', 'Black Iron Commando', 'Green Starry Sight', 'Red Goof', 'Perfectly Legitimate Business Hat', 'Beautiful Hair for Beautiful Space People', 'ROBLOX Madness Face', 'Catching Snowflakes', 'Neon Bombastic Animal Hoodie', 'Golden Crown', 'Hyperlaser Gun', 'Golden Bling Braces', 'Bucket', 'Scissors', 'Noob Attack: Ninja Nuisance', 'Crescendo, The Soul Stealer', 'Ghostwalker', 'Red Fang', 'CW Ultimate: Amethyst Addiction', 'Blackvalk Shades', 'Al Capwn', '']
+	limited_lists = ['Valkyrie Helm', 'Playful Vampire', 'Super Super Happy Face', 'Supa Dupa Fly Cap', 'Supa Fly Cap', 'Gucci Dionysus Bag with Bee', 'Gucci GG Marmont Bag', 'Gucci Wide Brim Felt Hat', 'Noob Attack: Frozen Crossbow Collision', 'Noob Assist Marvelous Mom', 'Noob Attack: Golden Sword Gladiator', 'Chill Cap', 'Black Iron Commando', 'Green Starry Sight', 'Red Goof', 'Perfectly Legitimate Business Hat', 'Beautiful Hair for Beautiful Space People', 'ROBLOX Madness Face', 'Catching Snowflakes', 'Neon Bombastic Animal Hoodie', 'Golden Crown', 'Hyperlaser Gun', 'Golden Bling Braces', 'Bucket', 'Scissors', 'Noob Attack: Ninja Nuisance', 'Crescendo, The Soul Stealer', 'Ghostwalker', 'Red Fang', 'CW Ultimate: Amethyst Addiction', 'Blackvalk Shades', 'Al Capwn', 'Silver Punk Face', 'Snowman Face', 'Blackvalk', 'Prankster']
 	while showing_logs == True: #below is just print random prices and limiteds
 		price = random.randint(17, 2777)
 		sniped_limited = random.choice(limited_lists)
-		time_random = random.randint(2, 5)
+		time_random = random.randint(2, 7)
 		embed69 = discord.Embed(title="Limited Sniped Logs", color=0x47FF75)
 		embed69.add_field(
-			name="Limiteds Sniped!",
+			name="ㅤ",
 			value=f"**Sniped Limited**: {sniped_limited}\n **Sniped For**: {price} Robux",
 			inline = True
 		)
@@ -52,19 +52,19 @@ async def help(ctx):
 	)
 	embed_help.add_field(
 		name="Commands",
-		value=f"**{p}help** -Shows this message\n**{p}commands** -Shows all available commands\n**{p}tutorial** -Shows how to start sniping limiteds\n**{p}snipe + Roblox Cookie** -Starts sniping.\n**{p}setbudget + amount** -Sets budget when sniping\n**{p}antiproject + on/off** -Doesn't snipe projected items.",
+		value=f"**{p}help** -Shows this message\n**{p}commands** -Shows all available commands\n**{p}tutorial** -Shows how to start sniping limiteds\n**{p}snipe + Roblox Cookie** -Starts sniping.\n**{p}setbudget + amount** -Sets budget when sniping\n**{p}antiproject + on/off** -Doesn't snipe projected items.\n**{p}stop** -Stops sniping ",
 		inline=True
 	)
 	embed_help.set_footer(text="For Further Help, Contact The Server Owner.")
 	await ctx.send(embed=embed_help)
 
-@client.command()
+@client.command() #budget command
 async def setbudget(ctx, budget):
 	budget = int(budget)
 	embed_budget = discord.Embed(title=f"Budget Set to {budget} Robux", color=0x47FF75)
 	await ctx.send(embed=embed_budget)
 
-@client.command()
+@client.command() #anti project items command
 async def antiproject(ctx, boolean):
 	if boolean.lower() == 'on':
 		embed_antiproject = discord.Embed(title="Anti-Projected Items Turned On", color=0x47FF75)
@@ -80,7 +80,7 @@ async def commands(ctx):
     )
     embed_cmd.add_field(
         name="Commands",
-        value=f"**{p}help** -Shows about and available commands\n**{p}commands** -Shows this message\n**{p}tutorial** -Shows how to start sniping limiteds\n**{p}snipe + Roblox Cookie** -Starts sniping.\n**{p}setbudget + amount** -Sets budget when sniping\n**{p}antiproject + on/off** -Doesn't snipe projected items.",
+        value=f"**{p}help** -Shows about and available commands\n**{p}commands** -Shows this message\n**{p}tutorial** -Shows how to start sniping limiteds\n**{p}snipe + Roblox Cookie** -Starts sniping.\n**{p}setbudget + amount** -Sets budget when sniping\n**{p}antiproject + on/off** -Doesn't snipe projected items.\n**{p}stop** -Stops sniping",
         inline=True,
     )
     embed_cmd.set_footer(text="For Further Help, Contact The Server Owner.")
@@ -94,13 +94,17 @@ async def tutorial(ctx):
     )
     embed_tutorial.add_field(
         name="Tutorial \n",
-        value=f"\n1. Get Your Roblox Cookie. \n2. Goto The Bot's DM. \n3. Change Configurations If You Want to. \n4. Type '{p}snipe' + Your Cookie\n \n **Example**\n {p}snipe _|WARNING:-DO-NOT-SHARE-THIS.--Sharing-this-will-allow-someone-to-log-in-as-you-and-to-steal-your-ROBUX-and-items.|_COOKIE",
+        value=f"\n1. Get Your Roblox Cookie. \n2. Goto The Bot's DM. \n3. Change Configurations If You Want to. \n4. Type '{p}snipe' + Your Cookie\n**Type \"{p}stop\" to Stop Sniping.**\n \n **Example**\n {p}snipe _|WARNING:-DO-NOT-SHARE-THIS.--Sharing-this-will-allow-someone-to-log-in-as-you-and-to-steal-your-ROBUX-and-items.|_COOKIE",
         inline=True,
     )
     embed_tutorial.set_footer(text="For Further Help, Contact The Server Owner.")
     await ctx.send(embed=embed_tutorial)
     pass
 
+@client.command() #stop command
+async def stop(ctx):
+	embed_stop = discord.Embed(title="✅ Stopped Sniping ✅", color=0x47FF75)
+	await ctx.send(embed=embed_stop)
 
 @client.command() #snipe command
 async def snipe(ctx, cookie):
